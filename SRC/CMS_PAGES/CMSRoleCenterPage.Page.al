@@ -12,6 +12,7 @@ page 53125 "CMS Role Center Page"
                 part(Part1; "CMS Role Center Headline")
                 {
                     ApplicationArea = All;
+
                 }
 
                 part(part3; "CMS Candidate Cues")
@@ -172,6 +173,7 @@ page 53125 "CMS Role Center Page"
                 Caption = 'Interview Locations';
                 RunObject = page "CMS Interview Location List";
                 Image = List;
+                ToolTip = 'Create a new Interview Location';
                 RunPageMode = Edit;
             }
             action("Inteview Comitees List")
@@ -180,6 +182,7 @@ page 53125 "CMS Role Center Page"
                 ApplicationArea = All;
                 RunObject = page "CMS Interview Comitee List";
                 Image = List;
+                ToolTip = 'Create a new Interview Committee';
                 RunPageMode = Edit;
 
             }
@@ -189,6 +192,7 @@ page 53125 "CMS Role Center Page"
                 ApplicationArea = All;
                 RunObject = page "CMS Department List";
                 Image = List;
+                ToolTip = 'Department List';
                 RunPageMode = Edit;
 
             }

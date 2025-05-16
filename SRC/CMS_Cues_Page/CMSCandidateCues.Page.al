@@ -37,38 +37,13 @@ page 53117 "CMS Candidate Cues"
                     ApplicationArea = All;
                     DrillDownPageId = "CMS Candidate Application List";
                     ToolTip = 'Selected Applications';
-                    Image = Star;
+                    Style = Subordinate;
                     StyleExpr = true;
                 }
 
 
             }
-            cuegroup("Rejected Application")
-            {
-                field("Rejected Applications"; Rec."Rejected Applications")
-                {
-                    ApplicationArea = All;
-                    DrillDownPageId = "CMS Candidate Application List";
-                    ToolTip = 'Rejected Applications';
-                    Image = Info;
-                }
 
-            }
-            cuegroup("Employee")
-            {
-                CuegroupLayout = Wide;
-                field(Employees; Rec.Employees)
-                {
-
-                    DrillDownPageId = "CMS Employee List";
-                    ToolTip = 'Employees';
-                    Caption = 'Employees';
-                    Style = Favorable;
-                    Importance = Promoted;
-
-                }
-
-            }
         }
     }
 

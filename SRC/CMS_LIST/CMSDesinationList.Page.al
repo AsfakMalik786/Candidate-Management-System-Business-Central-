@@ -66,6 +66,7 @@ page 53108 "CMS Desination List"
                 Caption = 'Generate Vacancy';
                 ApplicationArea = All;
                 Image = New;
+                PromotedOnly = true;
                 Promoted = true;
                 PromotedCategory = Process;
                 ToolTip = 'Generate Vacancy';

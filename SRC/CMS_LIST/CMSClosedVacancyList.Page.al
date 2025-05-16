@@ -61,6 +61,7 @@ page 53102 "CMS Closed Vacancy List"
                 ApplicationArea = All;
                 Image = ReOpen;
                 Promoted = true;
+
                 PromotedCategory = Process;
                 ToolTip = 'Re-open the selected vacancy.';
 

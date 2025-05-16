@@ -2,6 +2,8 @@ page 53107 "CMS Role Center Headline"
 {
     PageType = HeadlinePart;
 
+
+
     layout
     {
         area(Content)
@@ -12,12 +14,12 @@ page 53107 "CMS Role Center Headline"
                 field(Welcome; Welcome)
                 {
                     ApplicationArea = All;
-                    Style = Strong;
+
                 }
                 field(Awesome; BusinessCentralIsAwesomeLbl)
                 {
                     ApplicationArea = All;
-                    Style = StrongAccent;
+
 
                     trigger OnDrillDown()
                     begin

@@ -233,16 +233,7 @@ table 53503 "CMS Candidate Application"
         field(37; "Second Responsible Interviewer"; Code[20])
         {
             Caption = 'Second Responsible Interviewer';
-            // TableRelation = "CMS Interview Committee"."Interviewer 2 Code";
-            // trigger OnValidate()
-            // var
-            //     comitee: Record "CMS Interview Committee";
-            // begin
-            //     if comitee.Get("Second Responsible Interviewer") then
-            //         "Second Respo. Interviewer Name" := comitee."Interviewer 2 Name"
-            //     else
-            //         "Second Respo. Interviewer Name" := '';
-            // end;
+
             TableRelation = Employee;
             trigger OnValidate()
             var
@@ -270,12 +261,7 @@ table 53503 "CMS Candidate Application"
             begin
                 if Committee.Get("Second Interview Committee") then
                     "Second Interview Committee Des" := Committee."Committee Name";
-                // "Second Responsible Interviewer" := Committee."Interviewer 2 Code";
-                // "Second Respo. Interviewer Name" := Committee."Interviewer 2 Name";
-                //     end else begin
-                //         "First Interview Committee Desc" := '';
-                //         "First Responsible Interviewer" := '';
-                //     end;
+
             end;
         }
         field(40; "Second Interview Committee Des"; Text[30])
@@ -315,22 +301,7 @@ table 53503 "CMS Candidate Application"
         field(46; "Third Responsible Interviewer"; Code[20])
         {
             Caption = 'Third Responsible Interviewer';
-            // TableRelation = "CMS Interview Committee";
-            // trigger OnValidate()
-            // var
-            //     comitee: Record "CMS Interview Committee";
-            // begin
-            //     if comitee.Get("Third Responsible Interviewer") then
-            //         "Third Respo Interviewer Name" := comitee."Interviewer 3 Name"
-            //     else
-            //         "Third Respo Interviewer Name" := '';
-            // end;
             TableRelation = Employee;
-
-        }
-        field(47; "Third Respo Interviewer Name"; Text[100])
-        {
-            Caption = 'Third Responsible Interviewer Name';
             trigger OnValidate()
             var
                 Employee: Record Employee;
@@ -340,6 +311,13 @@ table 53503 "CMS Candidate Application"
                 else
                     "Third Respo Interviewer Name" := '';
             end;
+
+
+        }
+        field(47; "Third Respo Interviewer Name"; Text[100])
+        {
+            Caption = 'Third Responsible Interviewer Name';
+
         }
         field(48; "Third Interview Committee"; Code[20])
         {
@@ -351,12 +329,7 @@ table 53503 "CMS Candidate Application"
             begin
                 if Committee.Get("Third Interview Committee") then
                     "Third Interview Committee Desc" := Committee."Committee Name";
-                // "Third Responsible Interviewer" := Committee."Interviewer 3 Code";
-                // "Third Respo Interviewer Name" := Committee."Interviewer 3 Name";
-                // end else begin
-                //     "Third Interview Committee Desc" := '';
-                //     "Third Responsible Interviewer" := '';
-                // end;
+
             end;
         }
         field(49; "Third Interview Committee Desc"; Text[30])
@@ -420,10 +393,6 @@ table 53503 "CMS Candidate Application"
         {
             Caption = 'Fourth Responsible Interviewer';
             TableRelation = Employee;
-        }
-        field(78; "Fourth Res. Interviewer Name"; Text[100])
-        {
-            Caption = 'Fourth Responsible Interviewer Name';
             trigger OnValidate()
             var
                 Employee: Record Employee;
@@ -433,6 +402,11 @@ table 53503 "CMS Candidate Application"
                 else
                     "Fourth Res. Interviewer Name" := '';
             end;
+        }
+        field(78; "Fourth Res. Interviewer Name"; Text[100])
+        {
+            Caption = 'Fourth Responsible Interviewer Name';
+
         }
         field(79; "Fourth Interview Committee"; Code[20])
         {
@@ -444,17 +418,11 @@ table 53503 "CMS Candidate Application"
                 Committee: Record "CMS Interview Committee";
             begin
                 if Committee.Get("Fourth Interview Committee") then
-                    "Fourth Interview Committe Desc" := Committee."Committee Name";
-                // "Fourth Responsible Interviewer" := Committee."Interviewer 1 Code";
-                // "Fourth Res. Interviewer Name" := Committee."Interviewer 1 Name";
-                //     end else begin
-                //         "Fourth Interview Committe Desc" := '';
-                //         "Fourth Responsible Interviewer" := '';
-                //     end;
+                    "Fourth Interview Committe Desc" := Committee."Interviewer 2 Name";
             end;
 
         }
-        field(80; "Fourth Interview Committe Desc"; Code[30])
+        field(80; "Fourth Interview Committe Desc"; Code[100])
         {
             Caption = 'Fourth Interview Committee Description';
             Editable = false;
@@ -588,21 +556,6 @@ table 53503 "CMS Candidate Application"
             exit(true);
         end;
     end;
-
-    // procedure AssistEditComitee(Comitee: Record "CMS Interview Committee")
-    // CanApp: Record "CMS Candidate Application";
-    // begin
-    //     CanApp.Get();
-    //     CanApp.TestField("First Interview Committee");
-    //     CanApp.TestField("First Res. Interviewer Name");
-    //     if CanApp."First Interview Committee" = '' then
-    //         CanApp."First Interview Committee" := Comitee."Committee Name";
-    //     CanApp."Second Interview Committee" := Comitee."Committee Name";
-    //     CanApp."First Res. Interviewer Name" := Comitee."Interviewer 1 Name";
-    //     CanApp."Second Respo. Interviewer Name" := Comitee."Interviewer 2 Name";
-
-
-    // end;
 
     local procedure CheckExperienceBeforeInsert()
     begin

@@ -227,23 +227,27 @@ page 53105 "CMS Candidate Application Card"
                 {
                     ApplicationArea = All;
                     ToolTip = 'Specifies the value of the First Interview Committee Desc field.';
+                    ShowMandatory = true;
 
                 }
                 field("First Interview Location"; Rec."First Interview Location")
                 {
                     ApplicationArea = All;
                     ToolTip = 'Specifies the value of the First Interview Location field.';
+                    ShowMandatory = true;
                 }
                 field("First Responsible Interviewer"; Rec."First Responsible Interviewer")
                 {
                     ApplicationArea = All;
                     ToolTip = 'Specifies the value of the First Responsible Interviewer field.';
                     Style = StrongAccent;
+                    ShowMandatory = true;
                 }
                 field("First Res. Interviewer Name"; Rec."First Res. Interviewer Name")
                 {
                     ApplicationArea = All;
                     ToolTip = 'Specifies the value of the First Res. Interviewer Name field.';
+                    ShowMandatory = true;
                 }
                 field("First Remarks"; Rec."First Remarks")
                 {
@@ -256,6 +260,7 @@ page 53105 "CMS Candidate Application Card"
                 {
                     ApplicationArea = All;
                     ToolTip = 'Specifies the value of the First Priority field.';
+                    ShowMandatory = true;
                 }
             }
             group("Second Interview")
@@ -292,6 +297,7 @@ page 53105 "CMS Candidate Application Card"
                 {
                     ApplicationArea = All;
                     ToolTip = 'Specifies the value of the Second Interview Committee Des field.';
+                    ShowMandatory = true;
                 }
                 field("Second Interview Location"; Rec."Second Interview Location")
                 {
@@ -305,16 +311,19 @@ page 53105 "CMS Candidate Application Card"
                     ApplicationArea = All;
                     ToolTip = 'Specifies the value of the Second Responsible Interviewer field.';
                     Style = StrongAccent;
+                    ShowMandatory = true;
                 }
                 field("Second Respo. Interviewer Name"; Rec."Second Respo. Interviewer Name")
                 {
                     ApplicationArea = All;
                     ToolTip = 'Specifies the value of the Second Respo. Interviewer Name field.';
+                    ShowMandatory = true;
                 }
                 field("Second Priority"; Rec."Second Priority")
                 {
                     ApplicationArea = All;
                     ToolTip = 'Specifies the value of the Second Priority field.';
+                    ShowMandatory = true;
                 }
                 field("Second Remarks "; Rec."Second Remarks ")
                 {
@@ -333,7 +342,6 @@ page 53105 "CMS Candidate Application Card"
                 field("Third Interview Round"; Rec."Third Interview Round")
                 {
                     ApplicationArea = All;
-                    Visible = IsRound3Visible;
                     ToolTip = 'Specifies the value of the Third Interview Round field.';
 
 
@@ -362,6 +370,7 @@ page 53105 "CMS Candidate Application Card"
                 {
                     ApplicationArea = All;
                     ToolTip = 'Specifies the value of the Third Interview Committee Desc field.';
+                    ShowMandatory = true;
                 }
                 field("Third Interview Location"; Rec."Third Interview Location")
                 {
@@ -374,18 +383,21 @@ page 53105 "CMS Candidate Application Card"
                     ApplicationArea = All;
                     ToolTip = 'Specifies the value of the Third Responsible Interviewer field.';
                     Style = StrongAccent;
+                    ShowMandatory = true;
                 }
 
                 field("Third Respo Interviewer Name"; Rec."Third Respo Interviewer Name")
                 {
                     ApplicationArea = All;
                     ToolTip = 'Specifies the value of the Third Respo Interviewer Name field.';
+                    ShowMandatory = true;
                 }
 
                 field("Third Priority"; Rec."Third Priority")
                 {
                     ApplicationArea = All;
                     ToolTip = 'Specifies the value of the Third Priority field.';
+                    ShowMandatory = true;
                 }
                 field("Third Remarks "; Rec."Third Remarks ")
                 {
